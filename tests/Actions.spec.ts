@@ -14,6 +14,8 @@ test.only ('valid login' , async ({page}) => {
     // //4- forword
     await page.pause();
     await page.goForward();
+    await page.pause();
+    
     await page.locator ("[id='username']").fill ('practice');
     await page.getByLabel ("Password").fill ('SuperSecretPassword!');
     await page.getByRole ("button", {name: 'Login'}).click();
